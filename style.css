@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+:root {
+    --neutral-bg: #0078aa;
+    --correct-bg: #00FF00;
+    --wrong-bg: #FF0000;
+}
+
+body {
+    --bg: var(--neutral-bg);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+body.correct {
+    --bg: var(--correct-bg);
+}
+
+body.wrong {
+    --bg: var(--wrong-bg);
+}
+
+.container {
+    padding: 10px;
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+
+}
+
+.btn {
+    --bg: var(--neutral-bg);
+    border: 1px solid var(--neutral-bg);
+    border-radius: 5px;
+    background-color: var(--bg);
+    color: white;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --bg: var(--correct-bg);
+}
+
+.btn.wrong {
+    --bg: var(--wrong-bg);
+}
+
+.start-btn,
+.next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none; 
+}
